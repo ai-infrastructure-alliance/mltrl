@@ -7,9 +7,7 @@ Repository for the MLTRL framework and materials.
 
 ## MLTRL Cards
 
-(intro) ...
-
-Here we incude a template for MLTRL practitioners to copy/fork for use in their projects, teams, organizations, and so on: (local link to trl_card.md).
+Here we incude a template for MLTRL practitioners to copy/fork for use in their projects, teams, and organizations: [MLTRL Card](https://github.com/ai-infrastructure-alliance/mltrl/blob/main/mltrl_card.md).
 
 Please see the MLTRL journal paper for example TRL Cards from several real-world use-cases.
 
