@@ -10,6 +10,7 @@
 | Req's, V&V docs         | (*link, if not on main page above*)   |
 | Code repo & docs        | (*link to Github etc*)   |
 | Ethics checks?          | WIP: *link to MVBO [checklist](../ethics_checklist.md)*   |
+| Coupled components      | R04.1, P13.2         |
 
 
 [^1]: Note the ID convention shown is arbitrary — we use `R` for research, `02` for some index on the team's projects, and `1` for a version of the project.
@@ -19,7 +20,7 @@
 
 ### Top-level requirements
 
-*Link to full [R&D requirements doc](); there is not yet a product req's doc.*
+*link to full R&D requirements doc (there is not yet a product req's doc)*
 
 1. The algorithm shall jointly optimize discrete and continuous variables.
 2. The BO approach shall be useful for hyperparameter optimization of data-driven models.
@@ -32,7 +33,7 @@
 
 ### Model / algorithm info
 
-A Bayesian optimization (BO) algorithm — a probabilsitic scheme for finding optimal parameters of a typically black-box, expensive function or system — but modified for mixed-variable settings: Our variation "mixed-variable BO" (MVBO) is for settings that have both discrete and continuous variables to optimize.
+A Bayesian optimization (BO) algorithm — a probabilsitic scheme for finding optimal parameters of a typically black-box, expensive function or system — but modified for mixed-variable settings: Our variation "mixed-variable BO" (MVBO) is for settings that have both discrete and continuous variables to optimize jointly.
 
 Implementation notes:
 
@@ -58,6 +59,7 @@ Implementation notes:
 - Low-level tests verify the algorithm can find solutions for simple mixed-variable functions
 - Tests verify the algorithm converges for standard BO problems
 - There are several unit tests on the BO loop, but more are needed (notably for diverse parameter sets)
+- MVBO algorithm converges to solution on optimization benchmark problems in 1.0s or less on 4-core CPU.
 
 **Extra notes**: Base BO tests are assumed valid from the source BoTorch and GPyTorch repositories
 
@@ -66,7 +68,13 @@ Implementation notes:
 
 Benchmark experiments have been run on standard optimization benchmarks, e.g. Branin Hoo
 
-Links to full [product requirements doc]() and the [R&D requirements doc]() if applicable from earlier levels.
+
+
+
+
+
+
+
 
 **Extra notes**: none
 

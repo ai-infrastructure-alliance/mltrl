@@ -46,7 +46,7 @@ reporting cards.
 
 ## Card Outline
 
-It's useful to view the Card contents in the context of real example Cards: [Level 4 BayesOpt example Card](examples/mltrl_card_BO_level4.md)
+It's useful to view the Card contents in the context of real example Cards: [Level 4 BayesOpt Card](examples/mltrl_card_BO_level4.md)
 
 ### Card content
 
@@ -64,12 +64,13 @@ It's useful to view the Card contents in the context of real example Cards: [Lev
 
 #### Top-level requirements
 
-A quick view of the main req's is very handy for newcomers and stakeholders to quickly grok the tech and development approach. The req's listed here will be integers 1, 2, 3, ... as the top-level representations of the bulk of req's in the format `req number.subset.component`.
-Then there will be link(s) to full req's + V&V table;  be sure to see how MLTRL defines *research-* and *product-requirements*, and the use of verification and validation (V&V).
+A quick view of the main req's is very handy for newcomers and stakeholders to quickly grok the tech and development approach. The req's listed here will be top-level, i.e. referenced with integers 1, 2, 3, ... aligned with the full project req's document, which follows the format `requirement number.subset.component`.
+
+Then there will be link(s) to full requirements + V&V table; refer to the main manuscript to see how MLTRL defines *research-* and *product-requirements*, and the use of verification and validation (V&V).
 
 #### Model/algorithm info
 
-Concise "elevator pitch" — think from the perspective of an MLTRL stagegate reviewer who may be a domain expert but not skilled in ML.
+Concise "elevator pitch" — think from the perspective of a MLTRL reviewer who may be a domain expert but not skilled in ML.
 
 #### Intended use
 
@@ -83,10 +84,10 @@ What's tested algorithmically? How is the code/implementation tested? What testi
 
 1. Refer to the MLTRL manuscript for level-by-level data specs.
 2. Highlight important/interesting data findings — for example, class imbalances, subpar labels, noise and gaps, acquisition assumptions, etc.
-3. Point to specific datasets (internal and external sources, and versioning info)
+3. Point to specific datasets in use (internal and external sources) and data versioning info.
 4. Explain precisely what data and conditions a model has been trained and developed on.
 
-Note this section, amongst others, can vary depending on the ML model or algorithm and the domain. For instance, this section can be verbose with examples for image models, but not necessarily for time series algorithms. And in fields such as medicine there should be notes on acquisition, sharing, privacy, and ethics.
+Note this section's content, amongst others, can vary significantly depending on the ML model or algorithm and the domain. For instance, this section can be verbose with examples for image models, but not necessarily for time series algorithms. And in fields such as medicine there should be notes on acquisition, sharing, privacy, and ethics that may not be as significant in e.g. manufacturing.
 
 #### Caveats, known edge cases, recommendations
 
