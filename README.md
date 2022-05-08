@@ -26,6 +26,7 @@ The MLTRL framework frequently calls on ethics policies to ensure safe and respo
 Here we include a thorough AI ethics guide for all to use, and adapt to your domain as needed: (local link to ethics_checklist.md)
 
 Note the recent develoment of community guidelines for AI publishing has resulted in a handful of industry-specific checklists. We list those that we know of here (and accept contributions from the community):
+
     - [MI_CLAIM (Minimum Information for CLinical AI Modeling)](https://github.com/beaunorgeot/MI-CLAIM)
     - [Checklist for Artificial Intelligence in Medical Imaging (CLAIM)](https://pubs.rsna.org/doi/10.1148/ryai.2020200029)
     - *TODO: more?*
@@ -37,10 +38,10 @@ Please submit additional materials via pull request, thanks.
 
 ### Talks:
 
-- 2022 @ MIT Media Lab; Lavin, ""
+- 2022 @ MIT Media Lab (TODO)
 - [2022 @ Immunai](assets/mltrl-immunai22.pdf)
-- 2021 @ AAAI; Lavin, ""
-- 2021 @ Cambridge; Lavin, ""
+<!-- - 2021 @ AAAI; Lavin, "" -->
+<!-- - 2021 @ Cambridge; Lavin, "" -->
 
 ### Papers:
 
@@ -60,5 +61,4 @@ If you use MLTRL and/or develop related methods, please cite our work as follows
   year={2021},
   volume={abs/2101.03989}
 }
-
 ```

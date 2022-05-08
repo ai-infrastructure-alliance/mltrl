@@ -1,39 +1,47 @@
 # MLTRL Cards
 
-In the ML Technology Readiness Levels framework [Lavin et al. '21](https://arxiv.org/abs/2101.03989), the maturity of each ML technology is tracked via "report cards" that grow and improve upon graduating levels, and provide a means of inter-team and cross-functional communication. Where the systems engineering framework itself defines a lingua franca for ML development and adoption, these *MLTRL cards* are like a [pilot's flight plan](https://en.wikipedia.org/wiki/Flight_plan) (and the MLTRL ethics checklist is like the pilot *and* crew [preflight checks](https://pilotinstitute.com/pre-flight-checks/)).
+In the ML/AI Technology Readiness Levels framework ([Lavin et al. '21](https://arxiv.org/abs/2101.03989)), the maturity of each ML technology is tracked via "report cards" called *MLTRL cards*. As a given technology or project proceeds through the framewark, a Card evolves corresponding to the progression of technology readiness levels. Cards provide a means of inter-team and cross-functional communication. Where the systems engineering framework itself defines a lingua franca for ML development and adoption, these *MLTRL cards* are like a [pilot's flight plan](https://en.wikipedia.org/wiki/Flight_plan) (and the MLTRL ethics checklist is like the pilot *and* crew [preflight checks](https://pilotinstitute.com/pre-flight-checks/)).
 
-The content of an MLTRL card is roughly in two categories: project info, and implicit knowledge. The former clearly states info such as project owners and reviewers, development status, and semantic versioning—not just for code, also for models and data. In the latter category are specific insights that are typically siloed in the ML development team but should be communicated to other stakeholders: modeling assumptions, dataset biases, corner cases, etc.
-MLTRL cards aim to be more information-dense than [comparisons](#comparisons-and-complements), like datasheets for medical devices and engineering tools, and should be prioritized for the progression of projects, rather than documentation afterthoughts; the aim is to promote transparency and trust, within teams and across organizations.
+The content of an MLTRL Card is roughly in two categories: project info, and implicit knowledge. The former clearly states info such as project owners and reviewers, development status, datasets, code and deployment characteristics, and semantic versioning (for code, models and data). In the latter category, Cards communicate specific insights that are typically siloed in the ML development team but should be transparent with other stakeholders: modeling assumptions, dataset biases, corner cases, etc. These critical details can be incomplete or ignored if Cards are treated as typical software documentation afterthoughts, and thus should be prioritized in project workflows; in MLTRL, Cards are key for progressing to subsequent development levels.
+
+the aim is to promote transparency and trust, within teams and across organizations.
 
 Here we incude a template for MLTRL practitioners to copy/fork for use in their projects, teams, organizations, and so on. Please refer to the full paper for more details and context, and cite the journal publication where appropriate: (todo: replace with DOI on publication) [arxiv.org/abs/2101.03989](https://arxiv.org/abs/2101.03989).
 
 
-### Comparisons and complements
+### Comparisons
 
-Recent ["ML model cards"](arxiv.org/abs/1810.03993) are related but not as all-encompassing... [Blog post](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-ai-explanations-to-increase-fairness-responsibility-and-trust) from Tracey Frey, Director of Strategy, Google Cloud AI: "Our aim with these first model card examples is to provide practical information about models' performance and limitations in order to help developers make better decisions about what models to use for what purpose and how to deploy them responsibly."
+MLTRL Cards aim to be more information-dense than recent comparisons; we're aiming for the utility of datasheets for medical devices and engineering tools, rather than high-level product whitepapers.
 
-ML model card comparisons:
-    - https://github.com/tensorflow/model-card-toolkit
-    - https://huggingface.co/course/chapter4/4?fw=pt
-    - GPT2 examples: https://huggingface.co/gpt2 and https://github.com/openai/gpt-2/blob/master/model_card.md
+Recent ["ML model cards"](arxiv.org/abs/1810.03993) are related but are not nearly as thorough and robust:
 
-(The huggingface gpt2 example is the closest to the TRL Card deliverable: clean yet detailed, actual examples that are information rather than Google card fluff, versioned and taggable.)
+```
+[Google Cloud blog post](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-ai-explanations-to-increase-fairness-responsibility-and-trust): "Our aim with these first model card examples is to provide practical information about models' performance and limitations in order to help developers make better decisions about what models to use for what purpose and how to deploy them responsibly."
+```
 
-MLTRL Cards should leverage other community tools (documentation, provenenance, etc.) where beneficial. For instance, **datasets** should have their own "datacard", which we don't specify (yet) in MLTRL.
-    - Google does well here with Datasheets for Datasets ([paper](https://arxiv.org/abs/1803.09010), [template](https://research.google/static/documents/datasets/crowdsourced-high-quality-colombian-spanish-es-co-multi-speaker-speech-dataset.pdf)), and it would be straightforward to follow suit. (Microsoft also provides a version, but in a format that is less implementable and transparent as a deliverable: https://www.microsoft.com/en-us/research/project/datasheets-for-datasets/)
-    - MLTRL prescribes semantic versioning for datasets... doable to coordinate datacards w/ DVC (data commits/tags and data artifacts/registries)?
-    - Following data accountability best-practices as they evolve: https://arxiv.org/abs/2010.13561.
+Additional ML model card comparisons:
+
+    - [Tensorflow Model Card Toolkit](https://github.com/tensorflow/model-card-toolkit)
+    - [🤗-Building a model card](https://huggingface.co/course/chapter4/4?fw=pt)
+    - GPT2 examples: [HuggingFace](https://huggingface.co/gpt2) and [OpenAI](https://github.com/openai/gpt-2/blob/master/model_card.md)
+
+The HuggingFace GPT2 example is the closest to the MLTRL Card deliverable: clean yet detailed, actual examples that are informative towards practical use (rather than simplistic Google card 'results'), versioned and taggable.
 
 
-Similarly, within MLTRL there are additional tools and deliverables that MLTRL Cards link to, namely for **ethics**: (link to "ML ethics checklist" section/page/repo).
+### Complements
 
+MLTRL Cards should leverage other community tools (documentation, provenenance, etc.) where beneficial. For instance, **datasets** should have their own "datacards", which we don't specify (yet) in MLTRL.
 
-#### Domain expert consortiums
+    - Google's "Datasheets for Datasets" ([paper](https://arxiv.org/abs/1803.09010), [template](https://research.google/static/documents/datasets/crowdsourced-high-quality-colombian-spanish-es-co-multi-speaker-speech-dataset.pdf)) — it is straightforward to follow this practice within the context of MLTRL. (Note that Microsoft also provides a version, but in a format that is less implementable and transparent as a deliverable: [MS Datasheets for Datasets](https://www.microsoft.com/en-us/research/project/datasheets-for-datasets/))
+    - Semantic versioning for datasets, prescribed in MLTRL, is becoming a standard practice and supported by many tools: for example, one can easily coordinate datacards and MTRL Cards with [DVC](https://dvc.org/) (including programmatic tools for keeping track with data commits/tags and data artifacts/registries).
+    - Data accountability, ethics, and overall best-practices are constantly evolving areas that should be tracked, potentially for incorporating new methods into MLTRL, and potentially for MLTRL learning lessons to inform the field. [Hutchinson et al. '21](https://arxiv.org/abs/2010.13561) is a good place to start.
+
+<!-- #### Domain expert consortiums
 
 - Rivera et al.[76]: calling for clinical trials reports for interventions involving AI – which will greatly benefit from the use of our TRL
 reporting cards.
 - more...
-
+ -->
 
 ---
 
