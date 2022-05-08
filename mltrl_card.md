@@ -13,17 +13,17 @@ Here we incude a template for MLTRL practitioners to copy/fork for use in their 
 
 MLTRL Cards aim to be more information-dense than recent comparisons; we're aiming for the utility of datasheets for medical devices and engineering tools, rather than high-level product whitepapers.
 
-Recent ["ML model cards"](arxiv.org/abs/1810.03993) are related but are not nearly as thorough and robust:
+Recent ["ML model cards"](arxiv.org/abs/1810.03993) are related but are not nearly as thorough and robust — from a [Google Cloud blog post](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-ai-explanations-to-increase-fairness-responsibility-and-trust):
 
 ```
-[Google Cloud blog post](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-ai-explanations-to-increase-fairness-responsibility-and-trust): "Our aim with these first model card examples is to provide practical information about models' performance and limitations in order to help developers make better decisions about what models to use for what purpose and how to deploy them responsibly."
+"Our aim with these first model card examples is to provide practical information about models' performance and limitations in order to help developers make better decisions about what models to use for what purpose and how to deploy them responsibly."
 ```
 
 Additional ML model card comparisons:
 
-    - [Tensorflow Model Card Toolkit](https://github.com/tensorflow/model-card-toolkit)
-    - [🤗-Building a model card](https://huggingface.co/course/chapter4/4?fw=pt)
-    - GPT2 examples: [HuggingFace](https://huggingface.co/gpt2) and [OpenAI](https://github.com/openai/gpt-2/blob/master/model_card.md)
+- [Tensorflow Model Card Toolkit](https://github.com/tensorflow/model-card-toolkit)
+- [🤗-Building a model card](https://huggingface.co/course/chapter4/4?fw=pt)
+- GPT2 examples: [HuggingFace](https://huggingface.co/gpt2) and [OpenAI](https://github.com/openai/gpt-2/blob/master/model_card.md)
 
 The HuggingFace GPT2 example is the closest to the MLTRL Card deliverable: clean yet detailed, actual examples that are informative towards practical use (rather than simplistic Google card 'results'), versioned and taggable.
 
@@ -32,9 +32,9 @@ The HuggingFace GPT2 example is the closest to the MLTRL Card deliverable: clean
 
 MLTRL Cards should leverage other community tools (documentation, provenenance, etc.) where beneficial. For instance, **datasets** should have their own "datacards", which we don't specify (yet) in MLTRL.
 
-    - Google's "Datasheets for Datasets" ([paper](https://arxiv.org/abs/1803.09010), [template](https://research.google/static/documents/datasets/crowdsourced-high-quality-colombian-spanish-es-co-multi-speaker-speech-dataset.pdf)) — it is straightforward to follow this practice within the context of MLTRL. (Note that Microsoft also provides a version, but in a format that is less implementable and transparent as a deliverable: [MS Datasheets for Datasets](https://www.microsoft.com/en-us/research/project/datasheets-for-datasets/))
-    - Semantic versioning for datasets, prescribed in MLTRL, is becoming a standard practice and supported by many tools: for example, one can easily coordinate datacards and MTRL Cards with [DVC](https://dvc.org/) (including programmatic tools for keeping track with data commits/tags and data artifacts/registries).
-    - Data accountability, ethics, and overall best-practices are constantly evolving areas that should be tracked, potentially for incorporating new methods into MLTRL, and potentially for MLTRL learning lessons to inform the field. [Hutchinson et al. '21](https://arxiv.org/abs/2010.13561) is a good place to start.
+- Google's "Datasheets for Datasets" ([paper](https://arxiv.org/abs/1803.09010), [template](https://research.google/static/documents/datasets/crowdsourced-high-quality-colombian-spanish-es-co-multi-speaker-speech-dataset.pdf)) — it is straightforward to follow this practice within the context of MLTRL. (Note that Microsoft also provides a version, but in a format that is less implementable and transparent as a deliverable: [MS Datasheets for Datasets](https://www.microsoft.com/en-us/research/project/datasheets-for-datasets/))
+- Semantic versioning for datasets, prescribed in MLTRL, is becoming a standard practice and supported by many tools: for example, one can easily coordinate datacards and MTRL Cards with [DVC](https://dvc.org/) (including programmatic tools for keeping track with data commits/tags and data artifacts/registries).
+- Data accountability, ethics, and overall best-practices are constantly evolving areas that should be tracked, potentially for incorporating new methods into MLTRL, and potentially for MLTRL learning lessons to inform the field. [Hutchinson et al. '21](https://arxiv.org/abs/2010.13561) is a good place to start.
 
 <!-- #### Domain expert consortiums
 

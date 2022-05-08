@@ -27,9 +27,9 @@ Here we include a thorough AI ethics guide for all to use, and adapt to your dom
 
 Note the recent develoment of community guidelines for AI publishing has resulted in a handful of industry-specific checklists. We list those that we know of here (and accept contributions from the community):
 
-    - [MI_CLAIM (Minimum Information for CLinical AI Modeling)](https://github.com/beaunorgeot/MI-CLAIM)
-    - [Checklist for Artificial Intelligence in Medical Imaging (CLAIM)](https://pubs.rsna.org/doi/10.1148/ryai.2020200029)
-    - *TODO: more?*
+- [MI_CLAIM (Minimum Information for CLinical AI Modeling)](https://github.com/beaunorgeot/MI-CLAIM)
+- [Checklist for Artificial Intelligence in Medical Imaging (CLAIM)](https://pubs.rsna.org/doi/10.1148/ryai.2020200029)
+- *TODO: more?*
 
 
 ## MLTRL resources
