@@ -8,16 +8,14 @@ the aim is to promote transparency and trust, within teams and across organizati
 
 Here we incude a template for MLTRL practitioners to copy/fork for use in their projects, teams, organizations, and so on. Please refer to the full paper for more details and context, and cite the journal publication where appropriate: (todo: replace with DOI on publication) [arxiv.org/abs/2101.03989](https://arxiv.org/abs/2101.03989).
 
+The best subtrates/platforms for MLTRL Cards we've seen are git-traceable markdown (as in this repo) and internal company docs on platforms such as Nuclino and Confluence. These exemplify several **necessary features of whatever tool you choose: Card provenance, cross-linking with users and pages, and living/editable doc that mitigates stagnation.**
+
 
 ### Comparisons
 
 MLTRL Cards aim to be more information-dense than recent comparisons; we're aiming for the utility of datasheets for medical devices and engineering tools, rather than high-level product whitepapers.
 
-Recent ["ML model cards"](arxiv.org/abs/1810.03993) are related but are not nearly as thorough and robust — from a [Google Cloud blog post](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-ai-explanations-to-increase-fairness-responsibility-and-trust):
-
-```
-"Our aim with these first model card examples is to provide practical information about models' performance and limitations in order to help developers make better decisions about what models to use for what purpose and how to deploy them responsibly."
-```
+Recent ["ML model cards"](arxiv.org/abs/1810.03993) are related but are not nearly as thorough and robust — from a [Google Cloud blog post](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-ai-explanations-to-increase-fairness-responsibility-and-trust): `"Our aim with these first model card examples is to provide practical information about models' performance and limitations in order to help developers make better decisions about what models to use for what purpose and how to deploy them responsibly."`
 
 Additional ML model card comparisons:
 
@@ -48,11 +46,13 @@ reporting cards.
 
 ## Card Outline
 
+It's useful to view the Card contents in the context of real example Cards: [Level 4 BayesOpt example Card](examples/mltrl_card_BO_level4.md)
+
 ### Card content
 
 > First is a quick summary table...
 
-- Tech name
+- Tech name, project ID
 - Current level
 - Owner(s)
 - Reviewer(s)
@@ -64,49 +64,30 @@ reporting cards.
 
 #### Top-level requirements
 
-(Be sure to see how MLTRL defines *research-* and *product-requirements*, and the use of verification and validation (V&V).)
-
-1. The algorithm shall jointly optimize discrete and continuous variables.
-2. The BO approach shall be useful for hyperparameter optimization.
-3. ...
-
-Link to full req's + V&V table.
+A quick view of the main req's is very handy for newcomers and stakeholders to quickly grok the tech and development approach. The req's listed here will be integers 1, 2, 3, ... as the top-level representations of the bulk of req's in the format `req number.subset.component`.
+Then there will be link(s) to full req's + V&V table;  be sure to see how MLTRL defines *research-* and *product-requirements*, and the use of verification and validation (V&V).
 
 #### Model/algorithm info
 
-Bayesian Optimization (BO)1 algorithm:
-    - Gaussian process surrogate model, with standard RBF kernel
-    - Thompson sampling scheme, which we run until converging to a local optimum
-Implementation leverages GPyTorch and BoTorch.
+Concise "elevator pitch" — think from the perspective of an MLTRL stagegate reviewer who may be a domain expert but not skilled in ML.
 
 #### Intended use
 
-- Optimize the parameters of an expensive, black-box function `f` with constraints.
-- This algorithm is specifically useful when `f` is mixed-variable: contains both discrete and continuous variables to optimize.
-- ML model parameter tuning is a common example for BO. With this MVBO we can tune the hyperparameters of a convnet: continuous variables (e.g. learning rate, momentum) and discrete variables (e.g. kernel size, stride, padding), subject to constraints – some combos of kernel/stride/padding lead to invalid networks.
-- Other applications include optimization in sensor placement / array design.
+This can have mission-critical information and should clearly communicate what, how, why of intended *and* unacceptable use-cases. In general this section is most verbose at the early stages of commercialization (Levels 5-8).
 
 #### Testing status
 
-Low-level tests verify the algorithm can find solutions for simple mixed-variable functions Tests verify the algorithm converges for standard BO problems
-There are several unit tests on the BO loop, but more are needed
+What's tested algorithmically? How is the code/implementation tested? What testing recommendations should be acted on in other MLTRL stages?
 
 #### Data considerations
 
-Benchmark experiments have been run on standard optimization benchmarks, e.g. Branin Hoo
+1. Refer to the MLTRL manuscript for level-by-level data specs.
+2. Highlight important/interesting data findings — for example, class imbalances, subpar labels, noise and gaps, acquisition assumptions, etc.
+3. Point to specific datasets (internal and external sources, and versioning info)
+4. Explain precisely what data and conditions a model has been trained and developed on.
 
-(Note this section is much more important with image models! We’ll want to explain precisely what data and conditions a model has been trained on.)
+Note this section, amongst others, can vary depending on the ML model or algorithm and the domain. For instance, this section can be verbose with examples for image models, but not necessarily for time series algorithms. And in fields such as medicine there should be notes on acquisition, sharing, privacy, and ethics.
 
 #### Caveats, known edge cases, recommendations
 
-- We have not yet run experiments to fully understand the algorithm relative to other BO components – e.g. GP vs RF as surrogate models.
-- For most BO problems you are best off starting with default algorithms (see BoTorch)
-
-
-
-
-
-
-
-
-
+Additional notes to highlight — for example, this is a good place to call out potential biases, technical or knowledge debt, and other matters to be considered in later stages.
