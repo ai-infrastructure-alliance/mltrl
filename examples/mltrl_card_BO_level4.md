@@ -66,17 +66,11 @@ Implementation notes:
 
 ### Data considerations
 
-Benchmark experiments have been run on standard optimization benchmarks, e.g. Branin Hoo
+Benchmark experiments have been run on standard optimization benchmarks (e.g. Branin Hoo functions) and also newer ML-based benchmarks: [github.com/uber/bayesmark](https://github.com/uber/bayesmark)
 
+Given the code refactoring at this stage to interface with (and extend) PyTorch-based BO libraries (BoTorch and GPyTorch), the MVBO implementation expects PyTorch-based data structures and data handlers.
 
-
-
-
-
-
-
-
-**Extra notes**: none
+There has not yet been extensive testing on noisy and sparse datasets, which should be done in the context of applications at later stages.
 
 
 ### Caveats, known edge cases, recommendations

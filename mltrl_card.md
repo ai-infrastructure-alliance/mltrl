@@ -92,3 +92,8 @@ Note this section's content, amongst others, can vary significantly depending on
 #### Caveats, known edge cases, recommendations
 
 Additional notes to highlight — for example, this is a good place to call out potential biases, technical or knowledge debt, and other matters to be considered in later stages.
+
+
+#### MLTRL stage debrief
+
+Succinct summary of stage progress, in a question-response format that is specified at review time (or using defaults like those in the [MLTRL Card examples](examples/).

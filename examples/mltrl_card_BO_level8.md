@@ -63,3 +63,25 @@ If there is not sufficient data to validate the optimization module ahead of a g
 ### Caveats, known edge cases, recommendations
 
 In very rare cases that we've only seen in (intentionally challenging) simualted scenarios, the optimization module will try to shift half the solar field m degrees and the other half n degrees, and then back again on the next control loop. Simply adding random noise to several of the actuators eliminates this scenario without affecting performance metrics.
+
+### MLTRL stage debrief
+
+<!-- Succinct summary of stage progress – please respond to each question, link to extended material if needed... -->
+
+1. What was accomplished, and by who?
+
+    Containerization and integrastion of the optimization subsystem into a production-ready software module.
+
+2. What was punted and/or de-scoped?
+
+    n/a
+
+3. What was learned?
+
+    Runtime of optimization module is insignificant relative to the broader control software system :) although most of the CI/CD testing is focused on optmization scenarios and robustness.
+
+4. What tech debt what gained? Mitigated?
+
+    Potentially mitigated by containerizing the optimization subsystem such that we may release it as an independent packge for open-source (and thus gain feedback from external use-cases). Note that open-sourcing is in the backlog for this project (i.e. this solar-opt epic on jira).
+
+---
