@@ -1,6 +1,6 @@
 # Machine Learning Technology Readiness Levels
 
-Repository for the MLTRL framework and materials.
+Repository for the MLTRL framework and materials. [![DOI](https://zenodo.org/badge/511701165.svg)](https://zenodo.org/badge/latestdoi/511701165)
 
 ![Alt text](assets/mltrl_flow_full.png?raw=true "MLTRL Flow")
 
