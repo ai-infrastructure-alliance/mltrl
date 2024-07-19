@@ -1,12 +1,16 @@
 # MLTRL Cards
 
-In the ML/AI Technology Readiness Levels framework ([Lavin et al. '21](https://arxiv.org/abs/2101.03989)), the maturity of each ML technology is tracked via "report cards" called *MLTRL cards*. As a given technology or project proceeds through the framewark, a Card evolves corresponding to the progression of technology readiness levels. Cards provide a means of inter-team and cross-functional communication. Where the systems engineering framework itself defines a lingua franca for ML development and adoption, these *MLTRL cards* are like a [pilot's flight plan](https://en.wikipedia.org/wiki/Flight_plan) (and the MLTRL ethics checklist is like the pilot *and* crew [preflight checks](https://pilotinstitute.com/pre-flight-checks/)).
+In the ML/AI Technology Readiness Levels framework ([Lavin et al. '22](https://doi.org/10.1038/s41467-022-33128-9)), the maturity of each ML technology is tracked via "report cards" called *MLTRL cards*. As a given technology or project proceeds through the framewark, a Card evolves corresponding to the progression of technology readiness levels. Cards provide a means of inter-team and cross-functional communication. Where the systems engineering framework itself defines a lingua franca for ML development and adoption, these *MLTRL cards* are like a [pilot's flight plan](https://en.wikipedia.org/wiki/Flight_plan) (and the MLTRL ethics checklist is like the pilot *and* crew [preflight checks](https://pilotinstitute.com/pre-flight-checks/)).
 
 The content of an MLTRL Card is roughly in two categories: project info, and implicit knowledge. The former clearly states info such as project owners and reviewers, development status, datasets, code and deployment characteristics, and semantic versioning (for code, models and data). In the latter category, Cards communicate specific insights that are typically siloed in the ML development team but should be transparent with other stakeholders: modeling assumptions, dataset biases, corner cases, etc. These critical details can be incomplete or ignored if Cards are treated as typical software documentation afterthoughts, and thus should be prioritized in project workflows; in MLTRL, Cards are key for progressing to subsequent development levels.
 
 the aim is to promote transparency and trust, within teams and across organizations.
 
-Here we incude a template for MLTRL practitioners to copy/fork for use in their projects, teams, organizations, and so on. Please refer to the full paper for more details and context, and cite the journal publication where appropriate: (todo: replace with DOI on publication) [arxiv.org/abs/2101.03989](https://arxiv.org/abs/2101.03989).
+Here we incude a template for MLTRL practitioners to copy/fork for use in their projects, teams, organizations, and so on. Please refer to the full paper for more details and context, and cite the journal publication where appropriate:
+
+```md
+Lavin, A., Gilligan-Lee, C.M., Visnjic, A. et al. Technology readiness levels for machine learning systems. Nat Commun 13, 6039 (2022). https://doi.org/10.1038/s41467-022-33128-9
+```
 
 The best subtrates/platforms for MLTRL Cards we've seen are git-traceable markdown (as in this repo) and internal company docs on platforms such as Nuclino and Confluence. These exemplify several **necessary features of whatever tool you choose: Card provenance, cross-linking with users and pages, and living/editable doc that mitigates stagnation.**
 
